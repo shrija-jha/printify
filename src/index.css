@@ -1,13 +1,575 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  font-family: AODCFH Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: 400;
+  color: #1b1b1b;
+  position: fixed;
+  top: 0;
+  padding: 0px 32px;
+  height: 70px;
+  width: 100%;
+
 }
+
+.logo {
+  margin-right: auto;
+}
+
+.logo img {
+  width: 135px;
+  height: 50px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.nav {
+  margin-right: auto;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav li {
+  margin-right: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+.buttons {
+  display: flex;
+}
+
+.view-products-button{
+  color: hsl(138, 52%, 47%);
+  border: #fff;
+  cursor: pointer;
+  padding: 10px 20px;
+  display: block;
+  font-size: 1rem;
+}
+.view-products-button:hover{
+  color: hsl(138, 62%, 37%);
+}
+
+.login{
+  background-color: #fff;
+  color: #353a57;
+  border: 2px solid #e7e7e7;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0px 16px;
+  font-family: 16px;
+  font-size: 16px;
+  height: 36px;
+  font-weight: 500px;
+  margin-left: 16px;
+  display:inline-block;
+
+}
+.login:hover{
+  color:#39b65e;
+}
+
+.signup {
+  background-color: hsl(138, 52%, 47%);
+  color: #fff;
+  padding: 0px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 20px;
+  margin-right: 100px;
+  height: 36px;
+  font-weight: 500px;
+  margin-left: 16px;
+  display:inline-block;
+}
+.signup:hover{
+  background-color: hsl(138, 52%, 40%);  ;
+}
+
+
+
+.main {
+  padding: 40px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left {
+  flex: 1;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: CerebriSans, sans-serif;
+  font-size: 56px;
+  font-weight: 700px;
+  line-height: 72px;
+  margin-left: 100px;
+  color: #17262b;
+  letter-spacing: -1.2px;
+}
+
+.features {
+  margin: 0;
+  padding: 0;
+  
+
+}
+
+
+.features li {
+  display: flex;
+  align-items: center;
+  margin-left: 100px;
+  font-size: 16px;
+  color: #485256;
+  
+}
+
+
+.features li img {
+  margin-left: 100px;
+}
+
+.start{
+  background-color: #39b65e;
+  color: #fff;
+  padding: 12px 32px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-right: 16px;
+  margin-left: 100px;
+  text-align: center;
+  font-size: 16px;
+}
+.start:hover{
+  background-color:  hsl(138, 52%, 40%);
+}
+
+
+.how {
+  background-color: #fff;
+  font-size: 16px;
+  color:#353a57;
+  padding: 12px 32px;
+  margin-right: 16px;
+  border: 2px solid #e7e7e7;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+.how:hover {
+  color: #39b65e ;
+}
+
+.trusted {
+  margin-top: 20px;
+  margin-left: 100px;
+  color: #39b65e;
+}
+
+.tshirt {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.tshirt img {
+  width: 300px;
+}
+
+
+.woman img {
+  width: 500px;
+}
+
+.footer {
+  padding: 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 200px;
+
+}
+
+.card {
+  margin-right: 80px;
+  margin-left: 10px;
+  text-align: left;
+
+}
+
+.card img {
+  width: 150px;
+  height: 150px;
+}
+
+
+.product-customization-container {
+  align-items: center; /* Align items vertically */
+  padding: 50px;
+}
+.img_demo {
+  position: relative;
+}
+.preview-section {
+  width: 248px;
+  right: -31%;
+  position: absolute;
+  top: 32%;
+}
+.preview-section img{
+  width: 100%;
+  height: auto;
+}
+.product-customization-child{
+  display: flex;
+  justify-content: space-between;
+}
+
+.products-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Adjust columns as needed */
+  grid-gap: 20px;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  position: relative; /* To position the plus icon */
+}
+
+/* Style the plus icon (you might want to use a CSS framework or your own icon) */
+.product-image::before {
+  content: '+';
+  font-size: 24px;
+  color: hsl(134, 61%, 41%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+.design-section {
+  max-width: 400px;
+  display: block;
+  color: black;
+   /* Adjust as needed */
+}
+
+.preview-section {
+  text-align: center;
+}
+
+.preview-section img{
+  width: 100%;
+  height: auto;
+}
+
+.product-preview {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.product-customization-container img {
+  border-radius: 20px;
+  height: 700px;
+  inset: 0;
+}
+
+.preview-section img{
+  border-radius: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.image {
+  width: 200px;
+  height: 200px;
+  margin-right: 50px;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+
+
+
+
+
+.containers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+.containers h1{
+  margin: auto;
+  text-align: center;
+}
+
+
+
+
+.integration-map {
+  position: relative;
+  width: 800px;
+  height: 400px;
+}
+
+.central-node img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 30%;
+  padding: 50px;
+}
+
+.integration-node {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 30%;
+  padding: 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform .2s;
+  animation: popOut 2s ease-in-out;
+}
+.integration-node img:hover{
+  z-index: 2;
+  transform: scale(1.2);
+  transition: transform 0.5s ease-in-out
+}
+@keyframes popOut {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+.integration-node img{
+  height: 50px;
+  width: 50px;
+
+}
+.integration-node :hover{
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari 3-8 */
+    transform: scale(1.2); 
+}
+
+/* Position integration nodes around the central node */
+.integration-node:nth-child(2) { top: 0%; left: 10%; } /*  bigcommerce */
+.integration-node:nth-child(3) { bottom: 0%; left: 10%; }/* shopify   */
+.integration-node:nth-child(4) { top: 10%; right: -19%; }/* owl */
+.integration-node:nth-child(5) { bottom: -10%; right: -10%; }/*  woo */
+.integration-node:nth-child(6) { top: 30%; left: -10%; }/*  wix */
+.integration-node:nth-child(7) { top: 50%; right: 10%;  }/* etsy  */
+.integration-node:nth-child(8) { bottom: 0%; left: -30%; }/* api  */
+.integration-node:nth-child(9) { top: 0%; right:110%; } /* andmore */
+.integration-node:nth-child(10) { top: 10%; left: 80%; }  /* squarespace */
+
+
+/* Add lines connecting central node to integration nodes (example) */
+
+
+.integration-node:nth-child(2)::before {
+  content: '';
+  position: relative;
+  top: 100%;
+  left: 50%;
+  width: 100px;
+  height: 2px;
+  background-color: #ddd;
+  z-index: -1;
+}
+.integration-node:nth-child(3)::before {
+  content: '';
+  position: relative;
+  top: 0;
+  left: 50%;
+  width: 100px;
+  height: 2px;
+  background-color: #ddd;
+  z-index: -1;
+}
+.integration-node:nth-child(4)::before {
+  content: '';
+  position: relative;
+  top: 100%;
+  left: 50%;
+  width: 100px;
+  height: 2px;
+  background-color: #ddd;
+  z-index: -1;
+}
+.integration-node:nth-child(5)::before {
+  content: '';
+  position: relative;
+  top: 0;
+  left: 50%;
+  width: 100px;
+  height: 2px;
+  background-color: #ddd;
+  z-index: -1;
+}
+.integration-node:nth-child(6)::before {
+  content: '';
+  position: relative;
+  top: 50%;
+  left: 100%;
+  width: 2px;
+  height: 100px;
+  background-color: #ddd;
+  z-index: -1;
+}
+.integration-node:nth-child(7)::before {
+  content: '';
+  position: relative;
+  top: 50%;
+  left: 0;
+  width: 2px;
+  height: 100px;
+  background-color: #ddd;
+  z-index: -1;
+}
+.integration-node:nth-child(8)::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 100px;
+  height: 2px;
+  background-color: #ddd;
+  z-index: -1;
+}
+.integration-node:nth-child(9)::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100px;
+  height: 2px;
+  background-color: #ddd;
+  z-index: -1;
+}
+.integration-node:nth-child(10)::before {
+  content: '';
+  position: relative;
+  top: 0;
+  left: 50%;
+  width: 50px;
+  height: 2px;
+  background-color: #ddd;
+  z-index: -1;
+}
+.cta-banner {
+  color: #1f6b45;
+  background-color: rgb(142, 209, 168);
+  padding: 20px 250px;
+  margin: 100px;
+  border: none;
+  border-radius: 10px;
+
+}
+.cta-banner button{
+  height: 50px;
+  width: 150px;
+}
+
+.bitcoin-container{
+  display: flex;
+  align-items: right;
+  justify-content: right;
+  margin-right: 100px;
+
+  height: 800px;
+
+}
+
+
+
+
+
+.column {
+  margin: 0 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.column ul li{
+  list-style: none;
+  cursor: pointer;
+  
+}
+
+.column ul li:hover{
+  color: #39b65e;
+}
+
+
+/* Add more lines as needed to connect other integration nodes */
+
+
+
+
+
